@@ -1,8 +1,9 @@
+import { Button, Container, Input, Link, Spacer, Text } from '@nextui-org/react';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
-import { Container, Button, Input, Spacer, Text, Link } from '@nextui-org/react';
+import { BiMinus, BiPause, BiPlay, BiPlus } from 'react-icons/bi';
 import ThemeSwitcher from '../components/ThemeSwitcher';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -35,15 +36,16 @@ export default function Home() {
           </Link>
         </Text>
         <Spacer />
-        <Button>Play</Button>
+        <Button.Group color="gradient" ghost rounded size="xl">
+          <Button icon={<BiPause size={'5em'} className={styles.buttonIconPlayPause} />} />
+          <Button icon={<BiPlay size={'5em'} className={styles.buttonIconPlayPause} />} />
+        </Button.Group>
         <Spacer />
-        <Button>Pause</Button>
-        <Spacer />
-        <Button>Toggle</Button>
-        <Spacer />
-        <Button>Vol +</Button>
-        <Spacer />
-        <Button>Vol -</Button>
+
+        <Button.Group color="gradient" ghost rounded size="xl">
+          <Button icon={<BiMinus size={'5em'} className={styles.buttonIconVol} />} />
+          <Button icon={<BiPlus size={'5em'} className={styles.buttonIconVol} />} />
+        </Button.Group>
         <Spacer />
         <Input clearable labelPlaceholder="Other command" />
         <Spacer />

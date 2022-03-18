@@ -3,13 +3,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { BiMinus, BiPause, BiPlay, BiPlus } from 'react-icons/bi';
 import ThemeSwitcher from '../components/ThemeSwitcher';
+import useApi from '../hooks/useApi';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   const { isDark } = useTheme();
+  const { play, pause, volInc, volDec } = useApi();
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Home Remote</title>
         <meta name="description" content="Home Remote - Control your devices" />

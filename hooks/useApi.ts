@@ -37,7 +37,7 @@ const useApi = () => {
     return volDecRequestResult;
   };
 
-  return { play, pause, volInc, volDec };
+  return { play, pause, volInc, volDec } as const;
 };
 
 export default useApi;

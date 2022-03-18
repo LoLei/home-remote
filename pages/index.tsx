@@ -1,4 +1,4 @@
-import { Button, Container, Input, Link, Spacer, Text } from '@nextui-org/react';
+import { Button, Container, Input, Link, Spacer, Text, useTheme } from '@nextui-org/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { BiMinus, BiPause, BiPlay, BiPlus } from 'react-icons/bi';
@@ -6,6 +6,8 @@ import ThemeSwitcher from '../components/ThemeSwitcher';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
+  const { isDark } = useTheme();
+
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +25,12 @@ export default function Home() {
         className={styles.mainContainer}
       >
         <Spacer />
-        <Image src="/logo.svg" alt="Vercel Logo" width={200} height={200} />
+        {isDark ? (
+          // Could use opacity instead as well to avoid the conditional
+          <Image src="/remote_dark.svg" alt="Vercel Logo" width={150} height={150} />
+        ) : (
+          <Image src="/remote_light.svg" alt="Vercel Logo" width={150} height={150} />
+        )}
         <Spacer />
         <Text h1 className={styles.textAlignCenter}>
           Welcome to&nbsp;

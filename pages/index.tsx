@@ -46,14 +46,26 @@ export default function Home() {
         </Text>
         <Spacer />
         <Button.Group color="gradient" ghost rounded size="xl">
-          <Button icon={<BiPause size={'5em'} className={styles.buttonIconPlayPause} />} />
-          <Button icon={<BiPlay size={'5em'} className={styles.buttonIconPlayPause} />} />
+          <Button
+            icon={<BiPause size={'5em'} className={styles.buttonIconPlayPause} />}
+            onClick={pause}
+          />
+          <Button
+            icon={<BiPlay size={'5em'} className={styles.buttonIconPlayPause} />}
+            onClick={play}
+          />
         </Button.Group>
         <Spacer />
 
         <Button.Group color="gradient" ghost rounded size="xl">
-          <Button icon={<BiMinus size={'5em'} className={styles.buttonIconVol} />} />
-          <Button icon={<BiPlus size={'5em'} className={styles.buttonIconVol} />} />
+          <Button
+            icon={<BiMinus size={'5em'} className={styles.buttonIconVol} />}
+            onClick={volDec}
+          />
+          <Button
+            icon={<BiPlus size={'5em'} className={styles.buttonIconVol} />}
+            onClick={volInc}
+          />
         </Button.Group>
         <Spacer />
         <Input clearable labelPlaceholder="Other command" />

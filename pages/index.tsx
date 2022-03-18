@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import { Container, Button, Input, Spacer, Text, Link } from '@nextui-org/react';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 export default function Home() {
   return (
@@ -49,6 +50,8 @@ export default function Home() {
             Show on Github
           </a>
         </Button>
+        <Spacer />
+        <ThemeSwitcher />
       </Container>
     </div>
   );

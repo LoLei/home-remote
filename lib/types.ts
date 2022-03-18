@@ -7,7 +7,7 @@ type CommandOutput = {
   stderr?: string;
 };
 
-export type ExecResult = {
+export type ResponseBody = {
   commandOutput: CommandOutput;
   metaInfo: string;
 };

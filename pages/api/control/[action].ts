@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import invariant from 'tiny-invariant';
 import { execCommand } from '../../../lib/command';
 import { CommandMap } from '../../../lib/consts';
-import { ExecResult, RequestBody, RequestCommand } from '../../../lib/types';
+import { ResponseBody, RequestBody, RequestCommand } from '../../../lib/types';
 
 const isValidRequestBody = (requestBody: Partial<RequestBody>): boolean => {
   // This validation is annoying. This should happen automatically.
@@ -19,7 +19,7 @@ const isValidRequestBody = (requestBody: Partial<RequestBody>): boolean => {
   return true;
 };
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse<ExecResult>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<ResponseBody>) {
   const params = req.query as RequestBody;
   invariant(isValidRequestBody(params), 'Request body is not valid.');
 

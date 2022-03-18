@@ -1,10 +1,10 @@
 import invariant from 'tiny-invariant';
 import util from 'util';
-import { ExecCommand, ExecResult } from './types';
+import { ExecCommand, ResponseBody } from './types';
 
 const exec = util.promisify(require('child_process').exec);
 
-export async function execCommand(commandToExecute: ExecCommand): Promise<ExecResult> {
+export async function execCommand(commandToExecute: ExecCommand): Promise<ResponseBody> {
   const execCommands = Object.values(ExecCommand);
   invariant(
     execCommands.includes(commandToExecute),

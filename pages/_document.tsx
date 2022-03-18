@@ -15,8 +15,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           {CssBaseline.flush()}
-          {/* Fix auto zoom in on mobile for fields with font size <16px https://stackoverflow.com/a/46254706/4644044 */}
-          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+          {/* PWA */}
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="apple-touch-icon" href="/icons/icon.png"></link>
+          <meta name="theme-color" content="#fff" />
         </Head>
         <body>
           <Main />

@@ -1,10 +1,10 @@
 {
-  "name": "Home Remote",
-  "short_name": "Home-Remote",
+  "name": "Home-Remote",
+  "short_name": "home-remote",
   "theme_color": "#000",
   "background_color": "#000",
   "display": "standalone",
-  "orientation": "",
+  "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
   "icons": [

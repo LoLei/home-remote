@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Home Remote</title>
-        <meta name="description" content="Home Remote - Control your devices" />
+        <title>Home-Remote</title>
+        <meta name="description" content="Home-Remote - Control your devices" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

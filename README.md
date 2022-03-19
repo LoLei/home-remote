@@ -10,10 +10,12 @@ Control your media devices from your phone. (On Linux 🐧)
 
 ## Information
 
-This web app lets you control media on your PC from your phone (or tablet, …).
-The server is started on the device to control, and devices in the **same Wifi**
-network can access the web interface, relaying commands to the PC. The commands triggered
-involve `playerctl` and `pactl`, and are strictly limited for now.
+This progressive web app lets you control media (browser players like YouTube or
+Netflix, desktop applications like Spotify or VLC) on your PC from your phone
+(or tablet). The server is started on the device to control, and devices in the
+**same Wifi** network can access the web interface, relaying commands to the PC.
+The commands triggered involve `playerctl` and `pactl`, and are strictly limited
+for now.
 
 ## Background
 

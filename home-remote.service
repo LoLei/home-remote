@@ -1,0 +1,12 @@
+[Unit]
+Description=Home Remote Service
+Requires=default.target
+After=network.target
+
+[Service]
+WorkingDirectory=/home/me/git/home-remote
+ExecStart=yarn start -p 3100
+Type=simple
+
+[Install]
+WantedBy=default.target

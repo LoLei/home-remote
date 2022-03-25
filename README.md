@@ -66,7 +66,9 @@ Simple steps to run this yourself after cloning the repo. (No npm package or som
 2. `yarn build`
 3. `yarn start -p $PORT`
 
-The "server" needs to be the same system on which the player runs/the sound is controlled.
+The "server" needs to be the same system on which the player runs/the sound is controlled.  
+Optional: Start this automatically via cron, systemd, your WM init service, etc.
+An example systemd unit file can be found in this repo.
 
 ### Phone/Tablet
 
